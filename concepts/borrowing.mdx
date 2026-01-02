@@ -1,28 +1,74 @@
 ---
 title: Borrowing
-description: "How to borrow assets on Axios Finance"
+description: "Step-by-step guide to borrowing assets on Axios"
 ---
 
-## For Borrowers
-
-**Step 1: Create a Loan Request**
-
-You specify:
-- **What you want to borrow**: e.g., 1,000 USDC
-- **What you'll pay back**: e.g., 1,100 USDC (10% interest)
-- **When you'll pay it back**: e.g., 30 days
-- **What you'll put up as security**: e.g., $1,500 worth of ETH
+## Quick Start: Borrow Assets
 
 <img src="/assets/borrow.png" alt="Borrow Interface" />
 
-**Step 2: Wait for a Lender**
-A lender sees your request and decides if your terms are fair. If yes, they accept and send you the 1,000 USDC.
+### Step 1: Select Your Loan Terms
 
-**Step 3: Use Your Money**
-The 1,000 USDC goes to your wallet. Your ETH is held securely by the smart contract (automated code) as collateral.
+1. **Choose what to borrow**: Select the asset and amount (e.g., 1,000 USDC)
+2. **Set your collateral**: Choose the asset you'll deposit as security (e.g., ETH)
+3. **Pick loan duration**: 1 day, 1 week, or 1 month
+4. **Set interest rate**: Enter your offered APY or use the market average
 
-**Step 4: Pay It Back**
-Before 30 days are up, you pay back 1,100 USDC.
+→ *The interface will calculate your repayment total and required collateral automatically*
 
-**Step 5: Get Your Collateral Back**
-The smart contract automatically returns your ETH to you. Done!
+### Step 2: Review Your Position
+
+Check the following metrics:
+- **LTV Ratio**: Should be in the "Safe Zone" (ideally 130-150%)
+- **Liquidation Threshold**: The price at which your collateral gets liquidated
+- **Health Factor**: Must stay above 1.00
+
+→ *These values update in real-time as you adjust amounts*
+
+### Step 3: Confirm Your Request
+
+<Warning>
+Your collateral can be liquidated if its value drops significantly. [Learn more about liquidation risk](collateral-and-liquidation)
+</Warning>
+
+1. Click **Create Borrow Request**
+2. Approve the transaction in your wallet
+
+→ *Your request will appear in the Markets tab as "Pending"*
+
+### Step 4: Wait for a Lender Match
+
+Your request stays open until:
+- A lender accepts your terms, OR
+- You cancel the request, OR
+- The expiration time is reached
+
+→ *You'll receive a notification when a lender fills your request*
+
+### Step 5: Receive Your Funds
+
+Once matched:
+- The borrowed amount arrives in your wallet immediately
+- Your collateral is locked in the smart contract
+- A countdown timer shows your repayment deadline
+
+### Step 6: Repay Before Deadline
+
+1. Go to your **Dashboard**
+2. Find your active loan
+3. Click **Repay Loan**
+4. Confirm the transaction
+
+→ *Your collateral is released automatically after repayment confirmation*
+
+---
+
+## What Happens If You're Late?
+
+- **Grace period**: 12-24 hours after the deadline
+- **After grace period**: Anyone can liquidate your position
+- **Liquidation**: Your collateral is sold to repay the lender + penalty fees
+
+<Tip>
+Set calendar reminders 24-48 hours before your repayment deadline. You can repay early at any time.
+</Tip>

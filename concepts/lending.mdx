@@ -1,26 +1,81 @@
 ---
 title: Lending
-description: "How to earn fixed yields on Axios Finance"
+description: "Step-by-step guide to earning fixed yields on Axios"
 ---
 
-## For Lenders
+## Quick Start: Lend Assets
 
-**Step 1: Create a Loan Offer**
+### Step 1: Create Your Loan Offer
 
-You post:
-- **What you're lending**: 1,000 USDC
-- **What you want back**: 1,100 USDC
-- **Duration**: 30 days
-- **Required collateral**: $1,500 worth of ETH
+1. **Choose what to lend**: Select the asset and amount (e.g., 1,000 USDC)
+2. **Set repayment amount**: Specify what you want back (e.g., 1,100 USDC = 10% interest)
+3. **Pick loan duration**: 1 day, 1 week, or 1 month
+4. **Set collateral requirement**: Choose the minimum LTV ratio (recommended: 150%)
 
-**Step 2: Wait for a Borrower**
-A borrower sees your offer and accepts your terms. They put up their ETH, and your USDC is sent to them.
+→ *The interface will display your effective APY based on these inputs*
 
-**Step 3: Earn Fixed Returns**
-You wait 30 days. No work required.
+### Step 2: Review Your Offer
 
-**Step 4: Get Repaid**
-After 30 days, you receive 1,100 USDC automatically. You earned $100 (10% over 30 days = 120% APY).
+Verify:
+- **Your APY**: Is it competitive with current market rates?
+- **Collateral ratio**: Higher = safer, but may take longer to match
+- **Duration**: Shorter terms = faster turnaround, but more management
 
-**Step 5: Sleep Well**
-If the borrower doesn't pay back, their ETH collateral is liquidated (sold automatically) and you still get your money back plus a bonus.
+→ *Browse the Markets tab to see what other lenders are offering*
+
+### Step 3: Confirm Your Offer
+
+1. Click **Create Lend Offer**
+2. Approve the transaction in your wallet
+
+→ *Your funds are locked immediately and your offer appears in the Markets tab*
+
+### Step 4: Wait for a Borrower Match
+
+Your offer stays active until:
+- A borrower accepts your terms, OR
+- You cancel the offer and withdraw funds, OR
+- The expiration time is reached
+
+→ *You'll receive a notification when a borrower fills your offer*
+
+### Step 5: Earn Fixed Returns
+
+Once matched:
+- Your repayment amount and date are locked
+- The borrower's collateral is held in escrow
+- A countdown timer shows when you'll be repaid
+
+→ *No action needed during the loan period*
+
+### Step 6: Receive Repayment
+
+On the repayment date:
+- Funds arrive in your wallet automatically
+- The protocol fee (5% during beta) is deducted from your interest earnings
+- Your net profit is displayed in your Dashboard
+
+→ *Repayment is fully automated; you don't need to claim or approve anything*
+
+---
+
+## What If the Borrower Doesn't Repay?
+
+Your funds are protected by over-collateralization:
+
+1. **Grace period expires**: 12-24 hours after the deadline
+2. **Liquidation triggered**: Anyone can liquidate the borrower's collateral
+3. **You receive**: Principal + 2% liquidation bonus
+4. **Settlement**: Happens automatically via smart contract
+
+<Tip>
+The higher collateral ratio you require (e.g., 150% vs 120%), the safer your position is against market volatility.
+</Tip>
+
+---
+
+## Maximizing Your Returns
+
+- **Browse requests first**: Borrowers often post requests with higher APY than typical offers
+- **Adjust for risk**: Require 150%+ collateral for volatile assets like ETH
+- **Diversify durations**: Mix short-term (1-7 days) and longer loans (30 days)
