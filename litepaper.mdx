@@ -282,27 +282,44 @@ Axios uses **Stork oracles** for real-time price data:
 
 ## FAQ
 
-<details>
-<summary><strong>Can I repay early?</strong></summary>
-Yes! Early repayment is allowed. Collateral returns immediately upon repayment.
-</details>
+<AccordionGroup>
+  <Accordion title="How does borrowing work?">
+    Borrowers create a loan request with their desired terms. Lenders review and fill these requests, after which the borrower receives the asset and must repay within the agreed duration.
+  </Accordion>
 
-<details>
-<summary><strong>What's the grace period?</strong></summary>
-12-24 hours after expiry before liquidation becomes possible.
-</details>
+  <Accordion title="How does lending work?">
+    Lenders can browse open loan requests and choose the ones that fit their risk and return preferences. Once a loan is funded, the borrower receives the funds and must repay according to the selected terms.
+  </Accordion>
 
-<details>
-<summary><strong>Can I add more collateral?</strong></summary>
-Not currently. This feature is planned for a future release.
-</details>
+  <Accordion title="Are there risks?">
+    As with any lending market, there is default risk. If a borrower fails to repay on time, the position can be liquidated and collateral is used to cover the obligation as much as possible.
+  </Accordion>
 
-<details>
-<summary><strong>What's the minimum loan size?</strong></summary>
-No strict minimum, but loans under $100 may not be worth the gas costs.
-</details>
+  <Accordion title="Which assets and markets are currently supported?">
+    Axios currently supports six core markets: FUEL, USDC, stFUEL, ETH, ezETH, and USDT. These assets provide users with diverse lending and borrowing options across native Fuel tokens, stablecoins, and Ethereum-based assets.
+  </Accordion>
 
-<details>
-<summary><strong>Is Axios audited?</strong></summary>
-Audit status will be published before mainnet launch at axios.finance/security.
-</details>
+  <Accordion title="What are Earn Vaults?">
+    Earn Vaults are set‑and‑forget strategy vaults: you deposit once, and the vault automatically allocates your capital into lending strategies managed by Axios. The protocol actively manages loans and reinvests proceeds on your behalf to seek sustainable yield without requiring you to monitor individual positions.
+  </Accordion>
+
+  <Accordion title="Can I repay my loan early?">
+    Yes! You can repay anytime before the deadline. Your collateral is returned immediately.
+  </Accordion>
+
+  <Accordion title="What happens if I'm 1 hour late on repayment?">
+    You have a 12-24 hour grace period after the loan expires. After that, anyone can liquidate your position.
+  </Accordion>
+
+  <Accordion title="Can I add more collateral to avoid liquidation?">
+    Not currently, but this feature is planned. For now, you must repay the entire loan to get collateral back.
+  </Accordion>
+
+  <Accordion title="What if there are no lenders for my terms?">
+    Your request stays open for the full duration you specified. You can cancel it anytime before someone fills it. Try adjusting your interest rate or collateral ratio to attract lenders.
+  </Accordion>
+
+  <Accordion title="Is my money safe?">
+    Axios uses smart contracts to hold funds - no human can access them. However, all DeFi involves risk. Never invest more than you can afford to lose.
+  </Accordion>
+</AccordionGroup>
