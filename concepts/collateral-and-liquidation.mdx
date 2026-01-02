@@ -1,0 +1,47 @@
+---
+title: Collateral & Liquidation
+description: "Understanding how Axios protects lenders"
+---
+
+## What Is Collateral?
+
+**Collateral is like a security deposit.**
+
+When you borrow, you must put up more value than you're borrowing. This protects the lender.
+
+**Example:**
+- You borrow: $10,000 USDC
+- You put up: $15,000 worth of ETH
+
+If you don't pay back the loan, the lender gets your ETH. This is why lenders are willing to lend to strangers on the internet.
+
+## What Is Liquidation?
+
+**Liquidation is when your collateral gets automatically sold to repay the lender.**
+
+This happens in two situations:
+
+### Situation 1: You Miss Your Repayment Deadline
+If you borrow for 30 days and don't pay back within 12-24 hours after the deadline, anyone can trigger a liquidation. Your collateral is sold, the lender gets paid, and you lose your collateral.
+
+### Situation 2: Your Collateral Value Drops (If Enabled)
+Crypto prices are volatile. If you put up $15,000 of ETH as collateral, but ETH crashes and your collateral is now only worth $11,000, it's not enough to cover the $10,000 loan anymore.
+
+**When collateral drops too much, liquidation happens automatically.**
+
+**Real Example:**
+- You borrow: 10,000 USDC
+- You put up: 15,000 USDC worth of ETH (1.5x collateral ratio)
+- ETH price drops 30%
+- Your ETH is now worth: 10,500 USDC
+- This triggers liquidation (you're below the safety threshold)
+
+**What happens in a liquidation:**
+- Your ETH collateral gets sold
+- Lender receives: 10,200 USDC (their 10,000 + 2% bonus)
+- Person who executed liquidation: 70 USDC (0.7% fee)
+- Axios protocol: 30 USDC (0.3% fee)
+- You receive: Whatever is left (roughly 200 USDC in this example)
+
+> [!WARNING]
+> Keep your collateral healthy. If it drops too much, you lose it.

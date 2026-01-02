@@ -1,0 +1,86 @@
+{
+    "name": "Axios Finance",
+    "logo": {
+        "dark": "/assets/logo-dark.svg",
+        "light": "/assets/logo-light.svg"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+        "primary": "#ea580c",
+        "light": "#fb923c",
+        "dark": "#9a3412",
+        "anchors": "#ea580c"
+    },
+    "topbarLinks": [
+        {
+            "name": "App",
+            "url": "https://axios.finance"
+        }
+    ],
+    "topbarCtaButton": {
+        "type": "github",
+        "url": "https://github.com/axios-finance/axios"
+    },
+    "primaryTab": {
+        "name": "Home"
+    },
+    "tabs": [
+        {
+            "name": "Guide",
+            "url": "introduction"
+        },
+        {
+            "name": "Litepaper",
+            "url": "litepaper"
+        }
+    ],
+    "anchors": [
+        {
+            "name": "Community",
+            "icon": "discord",
+            "url": "https://discord.gg/axios"
+        },
+        {
+            "name": "Twitter",
+            "icon": "twitter",
+            "url": "https://twitter.com/AxiosFinance"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "Getting Started",
+            "pages": [
+                "introduction",
+                "litepaper"
+            ]
+        },
+        {
+            "group": "Core Concepts",
+            "pages": [
+                "concepts/borrowing",
+                "concepts/lending",
+                "concepts/collateral-and-liquidation"
+            ]
+        },
+        {
+            "group": "Protocol",
+            "pages": [
+                "protocol/fees",
+                "protocol/technology",
+                "protocol/roadmap"
+            ]
+        },
+        {
+            "group": "Resources",
+            "pages": [
+                "resources/faq",
+                "resources/glossary"
+            ]
+        }
+    ],
+    "footerSocials": {
+        "x": "https://x.com/AxiosFinance",
+        "github": "https://github.com/axios-finance",
+        "discord": "https://discord.gg/axios"
+    }
+}

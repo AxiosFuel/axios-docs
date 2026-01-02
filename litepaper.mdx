@@ -1,0 +1,308 @@
+---
+title: "Litepaper"
+description: "The comprehensive guide to Axios Finance"
+---
+
+<p align="center">
+  <img src="/assets/homepage.png" alt="Axios Homepage" />
+</p>
+
+# Executive Summary
+
+Axios Finance is a **peer-to-peer lending protocol** built on the Fuel Network that enables users to borrow and lend cryptocurrency with **fixed interest rates** and **custom terms**. Unlike traditional DeFi lending pools where rates fluctuate based on utilization, Axios matches borrowers directly with lenders, ensuring both parties know their exact returns or costs upfront.
+
+## The Problem: Unpredictable DeFi Lending
+
+Current crypto lending platforms like Aave and Compound operate on a **shared pool model**:
+
+- Interest rates change constantly based on supply and demand
+- A lender earning 5% APY today might earn 2% tomorrow
+- Borrowers face the same uncertainty with loan costs
+- **Planning is impossible when rates are unpredictable**
+
+> [!IMPORTANT]
+> Variable rates create uncertainty. You can't plan your finances when your costs or returns change daily.
+
+## The Solution: Fixed-Rate Peer-to-Peer Lending
+
+Axios introduces a fundamentally different approach:
+
+| Feature | Axios (Fixed P2P) | Pool-Based (Aave/Compound) |
+|---------|-------------------|---------------------------|
+| **Rate Stability** | ✅ Locked at creation | ❌ Changes constantly |
+| **Custom Terms** | ✅ Full control | ❌ Standardized |
+| **Counterparty** | One matched user | Shared pool |
+| **Risk Isolation** | ✅ Independent loans | ❌ Pool-wide exposure |
+| **Predictability** | ✅ Known outcomes | ❌ Variable returns |
+
+## How Axios Works
+
+### Platform Overview
+
+Axios provides a clean, intuitive interface for accessing multiple lending markets:
+
+<img src="/assets/markets.png" alt="Borrowing Markets" />
+
+**Key Platform Metrics:**
+- **Asset Markets**: Multiple supported assets (ETH, FUEL, USDC)
+- **Loan Duration**: Flexible 1-30 day terms
+- **Competitive APYs**: Market-driven rates (17-25% average)
+
+### Creating a Loan
+
+The borrowing interface provides complete control over loan parameters:
+
+<img src="/assets/borrow.png" alt="Borrow Interface" />
+
+**Borrowers Specify:**
+- **Asset to borrow** (FUEL, ETH, USDC)
+- **Collateral asset and amount**
+- **Loan duration** (Day, Week, or Month)
+- **Expected APY** (market average or custom)
+
+**Safety Features:**
+- **LTV Ratio indicator** with Safe Zone guidance
+- **Liquidation Threshold** clearly displayed (75%)
+- **Health Factor monitoring** in real-time
+- **Liquidation Price** calculated automatically
+
+### Managing Positions
+
+The dashboard provides complete visibility into all active loans:
+
+<img src="/assets/dashboard.png" alt="User Dashboard" />
+
+**Dashboard Features:**
+- Active loan count and total borrowed/lent
+- Average health factor across positions
+- Time-sensitive alerts for expiring loans
+- One-click repayment actions
+- Position details with collateral breakdown
+
+> [!WARNING]
+> Loans expiring within 24 hours trigger automated alerts. Repay before the deadline to avoid liquidation.
+
+### Community & Leaderboard
+
+Track the most active participants on the platform:
+
+<img src="/assets/leaderboard.png" alt="Leaderboard" />
+
+**Tracked Metrics:**
+- Total volume per user
+- Number of completed loans
+- Success rate percentage
+- Interest earned
+
+## Core Mechanisms
+
+### Collateralization
+
+All loans are **over-collateralized** to protect lenders:
+
+- **Conservative**: 150% (borrow $10k with $15k collateral)
+- **Moderate**: 130% (borrow $10k with $13k collateral)
+- **Risky**: 120% (borrow $10k with $12k collateral)
+
+Higher collateral = safer for lenders = potentially lower interest rates.
+
+### Liquidation
+
+Liquidation protects lenders when loans become unsafe:
+
+**Trigger Conditions:**
+1. **Missed Repayment**: 12-24 hour grace period after expiry
+2. **Collateral Value Drop**: Below safety threshold (if enabled)
+
+**Liquidation Distribution:**
+| Recipient | Amount |
+|-----------|--------|
+| Lender | Principal + 2% bonus |
+| Liquidator | 0.7% of collateral |
+| Protocol | 0.3% of collateral |
+| Borrower | Remaining balance |
+
+### Oracle Integration
+
+Axios uses **Stork oracles** for real-time price data:
+
+- Continuous price updates
+- Multiple data sources aggregated
+- Fair liquidation price determination
+
+## Fee Structure
+
+### Protocol Fee: 10% of Interest (5% During Beta)
+
+**Example Transaction:**
+- **Borrower requests**: 10,000 USDC
+- **Repayment amount**: 11,000 USDC
+- **Interest generated**: 1,000 USDC
+
+**Distribution:**
+- **Lender receives**: 10,900 USDC
+- **Protocol fee**: 100 USDC (10% of interest)
+- **Borrower total cost**: 11,000 USDC
+
+> [!NOTE]
+> Fees are calculated on interest only, never on principal. This is significantly lower than the spread on traditional lending platforms.
+
+## Use Cases
+
+### Scenario 1: The Crypto Holder
+
+**Sarah's Situation:**
+- Owns 10 ETH worth $35,000
+- Needs $20,000 for a business opportunity
+- Believes ETH price will rise
+
+**Axios Solution:**
+1. Borrows 20,000 USDC for 90 days
+2. Deposits 8 ETH ($28,000) as collateral
+3. Agrees to repay 21,000 USDC (5% interest)
+4. Uses funds for business
+5. Repays and retrieves ETH
+
+**Result:** Maintained ETH exposure + accessed capital for only $1,000 in interest.
+
+### Scenario 2: The Yield Seeker
+
+**Michael's Situation:**
+- Has 50,000 USDC sitting idle
+- Wants predictable returns
+- Uncomfortable with variable rates
+
+**Axios Solution:**
+1. Creates loan offer: 50,000 USDC for 30 days
+2. Requires 150% collateral ratio
+3. Demands 50,500 USDC repayment (12% APY)
+4. Receives repayment after 30 days
+5. Earns 450 USDC net profit (after 50 USDC fee)
+
+**Result:** Earned 10.8% APY net with strong collateral protection.
+
+## Technical Architecture
+
+### Built on Fuel Network
+
+| Aspect | Details |
+|--------|---------|
+| **Network** | Fuel - High-performance modular blockchain |
+| **Transaction Fees** | $0.01-0.50 per transaction |
+| **Confirmation Time** | Seconds |
+| **Smart Contract Language** | Sway |
+| **Toolchain** | Forc 0.69.1 |
+
+**Why Fuel?**
+- Low transaction costs for accessible lending
+- Fast execution for real-time matching
+- Modern architecture built for efficiency
+
+## Security Model
+
+**Key Security Features:**
+- **Open Source**: All contracts publicly auditable
+- **Automated Enforcement**: No human intervention possible
+- **Isolated Positions**: Your loan is independent of others
+- **Oracle Redundancy**: Multiple price sources (planned)
+
+## Risk Disclosure
+
+### For Borrowers
+
+| Risk | Mitigation |
+|------|------------|
+| **Liquidation** | Use 150%+ collateral ratios |
+| **Price Volatility** | Set price alerts, monitor health factor |
+| **Deadline Miss** | Set reminders, repay early if volatile |
+
+### For Lenders
+
+| Risk | Mitigation |
+|------|------------|
+| **Capital Lock-up** | Only lend funds not needed short-term |
+| **Counterparty Default** | High collateral requirements |
+| **Extreme Market Crash** | Require higher LTV ratios |
+
+### Protocol Risks
+
+| Risk | Status |
+|------|--------|
+| **Smart Contract Bugs** | Audits pending, start with small amounts |
+| **Oracle Failure** | Multiple oracle sources planned |
+| **No Insurance Fund** | Users bear all risk currently |
+
+> [!CAUTION]
+> Axios Finance is experimental software. Never invest more than you can afford to lose.
+
+## Roadmap
+
+### ✅ Current (Beta Phase)
+- Core lending and borrowing
+- Fixed-rate peer-to-peer matching
+- Automated liquidations
+- Stork oracle integration
+- Reduced protocol fee (5%)
+
+### 🔄 Coming Soon
+- **Secondary Market**: Sell loan positions before maturity
+- **Multi-Collateral**: Combine assets to reduce liquidation risk
+- **Partial Fills**: Multiple lenders for large requests
+- **Advanced Analytics**: Risk scoring and performance tracking
+- **Mobile Apps**: Native iOS and Android
+
+### 🔮 Future Vision
+- **Hybrid AMM Model**: Combine P2P with liquidity pools
+- **On-Chain Credit Scoring**: Reputation-based better rates
+- **Cross-Chain Support**: Expand beyond Fuel
+- **Institutional Features**: Compliance tools and reporting
+
+## Getting Started
+
+### Prerequisites
+1. Fuel-compatible wallet (Fuel Wallet browser extension)
+2. Crypto assets (to borrow against or lend)
+3. Basic understanding of collateral and liquidation
+
+### Quick Start Guide
+
+**For Borrowers:**
+1. Connect wallet → Click "Borrow"
+2. Select asset, amount, and collateral
+3. Choose duration and confirm terms
+4. Wait for lender match
+5. Receive funds → Repay before deadline
+
+**For Lenders:**
+1. Connect wallet → Click "Lend"
+2. Browse requests or create offer
+3. Set terms and required collateral
+4. Wait for borrower match
+5. Receive repayment automatically
+
+## FAQ
+
+<details>
+<summary><strong>Can I repay early?</strong></summary>
+Yes! Early repayment is allowed. Collateral returns immediately upon repayment.
+</details>
+
+<details>
+<summary><strong>What's the grace period?</strong></summary>
+12-24 hours after expiry before liquidation becomes possible.
+</details>
+
+<details>
+<summary><strong>Can I add more collateral?</strong></summary>
+Not currently. This feature is planned for a future release.
+</details>
+
+<details>
+<summary><strong>What's the minimum loan size?</strong></summary>
+No strict minimum, but loans under $100 may not be worth the gas costs.
+</details>
+
+<details>
+<summary><strong>Is Axios audited?</strong></summary>
+Audit status will be published before mainnet launch at axios.finance/security.
+</details>
