@@ -22,11 +22,11 @@
         "url": "https://github.com/axios-finance/axios"
     },
     "primaryTab": {
-        "name": "Home"
+        "name": "Guide"
     },
     "tabs": [
         {
-            "name": "Guide",
+            "name": "Home",
             "url": "introduction"
         },
         {
