@@ -1,8 +1,8 @@
 {
     "name": "Axios Finance",
     "logo": {
-        "dark": "/assets/logo-dark.svg",
-        "light": "/assets/logo-light.svg"
+        "dark": "/assets/logo.png",
+        "light": "/assets/logo.png"
     },
     "favicon": "/favicon.png",
     "colors": {
