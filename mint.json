@@ -36,11 +36,6 @@
     ],
     "anchors": [
         {
-            "name": "Community",
-            "icon": "discord",
-            "url": "https://discord.gg/axios"
-        },
-        {
             "name": "Telegram",
             "icon": "telegram",
             "url": "https://t.me/c/axiosfinance"
