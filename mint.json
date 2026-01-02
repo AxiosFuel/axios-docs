@@ -1,8 +1,8 @@
 {
     "name": "Axios Finance",
     "logo": {
-        "dark": "/assets/logo.png",
-        "light": "/assets/logo.png"
+        "dark": "assets/logo.png",
+        "light": "assets/logo.png"
     },
     "favicon": "/favicon.png",
     "colors": {
@@ -41,21 +41,26 @@
             "url": "https://discord.gg/axios"
         },
         {
+            "name": "Telegram",
+            "icon": "telegram",
+            "url": "https://t.me/c/axiosfinance"
+        },
+        {
             "name": "Twitter",
-            "icon": "twitter",
-            "url": "https://twitter.com/AxiosFinance"
+            "icon": "x",
+            "url": "https://x.com/axios_finance"
         }
     ],
     "navigation": [
         {
-            "group": "Getting Started",
+            "group": "Start Here",
             "pages": [
                 "introduction",
                 "litepaper"
             ]
         },
         {
-            "group": "Core Concepts",
+            "group": "User Guides",
             "pages": [
                 "concepts/borrowing",
                 "concepts/lending",
@@ -63,7 +68,7 @@
             ]
         },
         {
-            "group": "Protocol",
+            "group": "Protocol Details",
             "pages": [
                 "protocol/fees",
                 "protocol/technology",
@@ -79,7 +84,7 @@
         }
     ],
     "footerSocials": {
-        "x": "https://x.com/AxiosFinance",
+        "x": "https://x.com/axios_finance",
         "github": "https://github.com/axios-finance",
         "discord": "https://discord.gg/axios"
     }
