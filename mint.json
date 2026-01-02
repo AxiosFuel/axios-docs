@@ -14,12 +14,12 @@
     "topbarLinks": [
         {
             "name": "App",
-            "url": "https://axios.finance"
+            "url": "https://beta.axiosfinance.xyz/"
         }
     ],
     "topbarCtaButton": {
         "type": "github",
-        "url": "https://github.com/axios-finance/axios"
+        "url": "https://github.com/AxiosFuel/axios-core-contracts"
     },
     "primaryTab": {
         "name": "Guide"
