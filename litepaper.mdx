@@ -35,64 +35,7 @@ Axios introduces a fundamentally different approach:
 | **Risk Isolation** | ✅ Independent loans | ❌ Pool-wide exposure |
 | **Predictability** | ✅ Known outcomes | ❌ Variable returns |
 
-## How Axios Works
 
-### Platform Overview
-
-Axios provides a clean, intuitive interface for accessing multiple lending markets:
-
-<img src="/assets/markets.png" alt="Borrowing Markets" />
-
-**Key Platform Metrics:**
-- **Asset Markets**: Multiple supported assets (ETH, FUEL, USDC)
-- **Loan Duration**: Flexible 1-30 day terms
-- **Competitive APYs**: Market-driven rates (17-25% average)
-
-### Creating a Loan
-
-The borrowing interface provides complete control over loan parameters:
-
-<img src="/assets/borrow.png" alt="Borrow Interface" />
-
-**Borrowers Specify:**
-- **Asset to borrow** (FUEL, ETH, USDC)
-- **Collateral asset and amount**
-- **Loan duration** (Day, Week, or Month)
-- **Expected APY** (market average or custom)
-
-**Safety Features:**
-- **LTV Ratio indicator** with Safe Zone guidance
-- **Liquidation Threshold** clearly displayed (75%)
-- **Health Factor monitoring** in real-time
-- **Liquidation Price** calculated automatically
-
-### Managing Positions
-
-The dashboard provides complete visibility into all active loans:
-
-<img src="/assets/dashboard.png" alt="User Dashboard" />
-
-**Dashboard Features:**
-- Active loan count and total borrowed/lent
-- Average health factor across positions
-- Time-sensitive alerts for expiring loans
-- One-click repayment actions
-- Position details with collateral breakdown
-
-> [!WARNING]
-> Loans expiring within 24 hours trigger automated alerts. Repay before the deadline to avoid liquidation.
-
-### Community & Leaderboard
-
-Track the most active participants on the platform:
-
-<img src="/assets/leaderboard.png" alt="Leaderboard" />
-
-**Tracked Metrics:**
-- Total volume per user
-- Number of completed loans
-- Success rate percentage
-- Interest earned
 
 ## Core Mechanisms
 
@@ -111,7 +54,7 @@ Higher collateral = safer for lenders = potentially lower interest rates.
 Liquidation protects lenders when loans become unsafe:
 
 **Trigger Conditions:**
-1. **Missed Repayment**: 12-24 hour grace period after expiry
+1. **Missed Repayment**: Loan expired without repayment
 2. **Collateral Value Drop**: Below safety threshold (if enabled)
 
 **Liquidation Distribution:**
@@ -245,17 +188,11 @@ Axios uses **Stork oracles** for real-time price data:
 - Reduced protocol fee (5%)
 
 ### 🔄 Coming Soon
+- **Passive Vaults**: where users can deposit and forget and that would be used to facilitate loans on chain by vault managers
 - **Secondary Market**: Sell loan positions before maturity
 - **Multi-Collateral**: Combine assets to reduce liquidation risk
 - **Partial Fills**: Multiple lenders for large requests
 - **Advanced Analytics**: Risk scoring and performance tracking
-- **Mobile Apps**: Native iOS and Android
-
-### 🔮 Future Vision
-- **Hybrid AMM Model**: Combine P2P with liquidity pools
-- **On-Chain Credit Scoring**: Reputation-based better rates
-- **Cross-Chain Support**: Expand beyond Fuel
-- **Institutional Features**: Compliance tools and reporting
 
 ## Getting Started
 
@@ -280,46 +217,4 @@ Axios uses **Stork oracles** for real-time price data:
 4. Wait for borrower match
 5. Receive repayment automatically
 
-## FAQ
 
-<AccordionGroup>
-  <Accordion title="How does borrowing work?">
-    Borrowers create a loan request with their desired terms. Lenders review and fill these requests, after which the borrower receives the asset and must repay within the agreed duration.
-  </Accordion>
-
-  <Accordion title="How does lending work?">
-    Lenders can browse open loan requests and choose the ones that fit their risk and return preferences. Once a loan is funded, the borrower receives the funds and must repay according to the selected terms.
-  </Accordion>
-
-  <Accordion title="Are there risks?">
-    As with any lending market, there is default risk. If a borrower fails to repay on time, the position can be liquidated and collateral is used to cover the obligation as much as possible.
-  </Accordion>
-
-  <Accordion title="Which assets and markets are currently supported?">
-    Axios currently supports six core markets: FUEL, USDC, stFUEL, ETH, ezETH, and USDT. These assets provide users with diverse lending and borrowing options across native Fuel tokens, stablecoins, and Ethereum-based assets.
-  </Accordion>
-
-  <Accordion title="What are Earn Vaults?">
-    Earn Vaults are set‑and‑forget strategy vaults: you deposit once, and the vault automatically allocates your capital into lending strategies managed by Axios. The protocol actively manages loans and reinvests proceeds on your behalf to seek sustainable yield without requiring you to monitor individual positions.
-  </Accordion>
-
-  <Accordion title="Can I repay my loan early?">
-    Yes! You can repay anytime before the deadline. Your collateral is returned immediately.
-  </Accordion>
-
-  <Accordion title="What happens if I'm 1 hour late on repayment?">
-    You have a 12-24 hour grace period after the loan expires. After that, anyone can liquidate your position.
-  </Accordion>
-
-  <Accordion title="Can I add more collateral to avoid liquidation?">
-    Not currently, but this feature is planned. For now, you must repay the entire loan to get collateral back.
-  </Accordion>
-
-  <Accordion title="What if there are no lenders for my terms?">
-    Your request stays open for the full duration you specified. You can cancel it anytime before someone fills it. Try adjusting your interest rate or collateral ratio to attract lenders.
-  </Accordion>
-
-  <Accordion title="Is my money safe?">
-    Axios uses smart contracts to hold funds - no human can access them. However, all DeFi involves risk. Never invest more than you can afford to lose.
-  </Accordion>
-</AccordionGroup>
